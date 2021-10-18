@@ -1,0 +1,168 @@
+@import "../../../scss/config";
+
+.bg {
+  position: fixed;
+  background-color: #00000057;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.container {
+
+  position: fixed;
+  top: 56px; // nav height
+  left: 0;
+  bottom: 0;
+  height: calc(100% - 56px);
+  box-sizing: border-box;
+  background-color: transparent;
+  z-index: 5;
+  transition-property: transform;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+
+  @media screen and (max-width: 810px) {
+    width: 100%;
+  }
+
+  &:hover>.wrapper>.content_container>.content_wrapper {
+
+    // A simple trick to check if the user is using mozilla firefox.
+
+    // if true
+    @supports (-moz-transform-style: preserve-3d) {
+      padding-right: 3px !important;
+    }
+
+    // else
+    @supports not (-moz-transform-style: preserve-3d) {
+      // 20px is padding-right / 0.65em is ::-webkit-scrollbar {width: 0.65em;}
+      padding-right: calc(20px - 0.65em) !important;
+    }
+  }
+
+  &:hover>.wrapper>.content_container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .wrapper {
+
+    display: flex;
+    position: absolute;
+    flex-flow: column nowrap;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    outline: none;
+    box-sizing: border-box !important;
+    max-width: 240px;
+    max-height: 100%;
+    height: 100%;
+    width: 240px;
+    color: var(--txt-guide-color);
+    border-bottom: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    background-color: var(--guide-bgc);
+    @extend %scroll;
+  }
+
+  .content_container {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column nowrap;
+    font-size: .88rem;
+    padding-top: 10px;
+    overflow: hidden;
+
+  }
+
+  .content_wrapper {
+
+    display: flex;
+    cursor: pointer;
+    padding: 8px 20px;
+
+    &:hover {
+      background-color: var(--bgc-hover);
+    }
+
+    &:active {
+      background-color: var(--guide-active-hover);
+    }
+
+    &--active {
+
+      font-family: Roboto-Medium;
+      color: var(--guide-active-txt-color);
+      background-color: var(--bgc-hover);
+    }
+  }
+
+  .text_container {
+    display: flex;
+    flex: 1;
+
+    .text_wrap {
+      align-self: center;
+    }
+  }
+
+  .notisvg {
+    flex: 0;
+  }
+
+  .content_icon {
+    display: flex;
+    align-items: center;
+    padding-right: 24px;
+  }
+
+
+  .line {
+
+    margin: 10px 0;
+    height: 0px !important;
+    padding: 1px 0;
+    background-color: var(--border-color);
+  }
+
+
+  .about {
+
+    padding: 8px 20px;
+    color: var(--abt-txt-color);
+
+    .txt {
+
+      padding: 5px 0;
+
+      &--x {
+        margin-bottom: 20px;
+      }
+
+      &--name {
+        font-family: Roboto-Medium;
+      }
+
+      .tt {
+
+        font-family: Roboto-Medium;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .subtitle {
+
+    font-family: Roboto-Medium;
+    padding: 8px 20px;
+    color: var(--subtitle-txt-color);
+  }
+}

@@ -1,0 +1,31 @@
+.container {
+    position: absolute;
+    bottom: -45px;
+    right: 25px;
+    border-radius: 2px;
+    padding: 10px 20px;
+    z-index: 1000;
+    transition: all .6s ease-in-out;
+    opacity: 1;
+    background-color: var(--apimessage-hover);
+    border: 1px solid var(--border-color);
+    color: var(--logo-txt-color);
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: -7px;
+        width: 0;
+        height: 0;
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-bottom: 7px solid var(--apimessage-hover);
+    }
+
+    span {
+        font-family: Roboto-Medium;
+        text-align: center;
+        font-size: .75rem;
+    }
+
+}

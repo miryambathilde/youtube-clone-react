@@ -1,0 +1,44 @@
+@mixin High-resolution {
+  @media (min-width: 1440px) {
+    padding-right: calc((100vw - 1440px) / 2 + 24px);
+    padding-left: calc((100vw - 1440px) / 2 + 24px);
+  }
+}
+
+%scroll {
+  ::-webkit-scrollbar {
+    width: 0.65em;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb-bgc);
+    background-clip: padding-box;
+    border: 0;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--scroll-thumb-hover-bgc);
+  }
+}
+
+%before {
+
+  position: absolute;
+  z-index: 2;
+  display: none;
+  padding: 10px;
+  font-size: 1em;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  top: calc(100% + 25px);
+  left: 50%;
+  opacity: 0.9;
+}
+
+%TT {
+
+  &::before {
+    color: var(--VidTitle-Color);
+    background-color: var(--miniplayer-hover-bgc);
+  }
+}

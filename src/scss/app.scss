@@ -1,0 +1,21 @@
+.root_container {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    background-color: var(--general-bgc);
+
+    .page_container {
+        margin-top: 56px;
+    }
+}
+
+#page-manager {
+
+    margin-left: 240px;
+    height: calc(100vh - 56px);
+
+    @media screen and (max-width: 1340px) {
+        margin-left: 72px;
+    }
+}

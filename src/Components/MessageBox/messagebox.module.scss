@@ -1,0 +1,51 @@
+.container {
+
+    position: fixed;
+    bottom: 10px;
+    border-radius: 2px;
+    left: 20px;
+    font-size: 1.5em;
+    z-index: 100;
+    transition: all .6s ease-in-out;
+    background-color: #323232;
+    color: #fff;
+    max-height: 60px !important;
+    max-width: 450px;
+
+    &--show {
+        transform: translateY(0px);
+    }
+
+    &--hide {
+        transform: translateY(60px);
+    }
+
+    .wrapper {
+
+        display: flex;
+        align-items: center;
+    }
+
+    .textcon {
+        margin: 0 10px;
+        padding: 15px 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .btn {
+
+        margin: 0 0 0 10px;
+        font-size: 0.8em;
+        cursor: pointer;
+        padding: 15px 12px;
+        font-weight: 600;
+        color: #2793e6;
+
+        &:active {
+            background-color: rgb(70, 70, 70);
+            color: #1f98f5;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.container {
+
+    position: fixed;
+    left: 0;
+    top: 56px;
+    bottom: 0;
+    font-size: 1.05em;
+    background-color: var(--guide-bgc);
+    color: var(--miniguide-txt-color);
+
+    @media screen and (max-width: 810px) {
+        display: none !important;
+    }
+
+    a:active {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .btn_wrapper {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        margin-top: 4px;
+        width: 72px;
+        padding: 16px 0 14px;
+        outline: 0;
+        cursor: pointer;
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+            background-color: var(--bgc-hover);
+        }
+
+        &:active {
+            background-color: var(--guide-active-hover)
+        }
+
+        &--active {
+            color: var(--guide-active-txt-color);
+            background-color: var(--bgc-hover);
+        }
+    }
+
+    .icon_wrap {
+        display: flex;
+    }
+
+    .text_wrap {
+        padding-top: 5px;
+    }
+}

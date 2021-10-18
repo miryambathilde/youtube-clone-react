@@ -1,0 +1,52 @@
+.container {
+
+    display: flex;
+    position: absolute;
+    flex-flow: column nowrap;
+    padding: 8px 0;
+    top: 55px;
+    z-index: 10;
+    border-bottom: 1px solid var(--border-color);
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+    background-color: var(--Nav-bgc);
+
+    .textcon {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 5px 25px 10px 13px;
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--VidTitle-Color);
+
+        &:hover {
+            background-color: var(--bgc-hover);
+        }
+
+        .icon_wrap {
+            margin-right: 7px
+        }
+
+        .text_wrap {
+            font-size: 0.95rem;
+            font-weight: 400;
+        }
+    }
+
+    .line {
+        margin: 5px 0;
+        background-color: var(--border-color);
+        height: 2px;
+    }
+}
+
+.position {
+    &--cam_drop {
+        right: 50px;
+    }
+
+    &--app_drop {
+        right: 130px;
+    }
+}
