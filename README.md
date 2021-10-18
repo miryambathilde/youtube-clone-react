@@ -12,11 +12,11 @@
 > Youtube Clone using React JS
 
 ### Tech / Stack
-React JS
-React Router
-SCSS
-YouTuve v3 API requests with React Axios and Redux Thunk
-Jest for unit testing
+- React JS.
+- React Router.
+- SCSS.
+- YouTuve API requests with React Axios and Redux Thunk.
+- Jest for unit testing.
 
 ## Install
 
