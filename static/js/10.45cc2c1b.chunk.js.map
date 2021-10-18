@@ -1,0 +1,1 @@
+{"version":3,"sources":["pages/Channel/index.jsx"],"names":["memo"],"mappings":"uHAAA,2BAMeA,0BAJC,WACd,OAAO","file":"static/js/10.45cc2c1b.chunk.js","sourcesContent":["import React, { memo } from \"react\";\n\nconst Channel = () => {\n  return <div></div>;\n};\n\nexport default memo(Channel);\n"],"sourceRoot":""}
